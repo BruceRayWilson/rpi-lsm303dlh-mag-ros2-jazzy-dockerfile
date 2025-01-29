@@ -8,6 +8,8 @@ import math
 import board
 import adafruit_lsm303dlh_mag
 
+MANUFACTURER = "DFRobot"  # Options: "DFRobot" or "Adafruit"
+
 i2c = board.I2C()  # uses board.SCL and board.SDA
 # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 sensor = adafruit_lsm303dlh_mag.LSM303DLH_Mag(i2c)
@@ -22,7 +24,9 @@ def vector_2_degrees(x, y):
 
 def get_heading(_sensor):
     magnet_x, magnet_y, magnet_z = _sensor.magnetic
-    return vector_2_degrees(magnet_x, magnet_z)
+    if MANUFACTURER == "Adafruit":
+        return vector_2_degrees(magnet_x, magnet_y)
+    return vector_2_degrees(magnet_x, magnet_z)  # Default DFRobot calculation
 
 def calculate_heading(x, y, declination=0):
     # Calculate heading in radians

@@ -17,6 +17,7 @@ See Josh's ROS2 Humble video at [Crafting your Dockerfile (Docker and Robotics P
 ## Updates
 
 - feat: Document exec.sh usage for second terminal access as root user
+- feat: Add manufacturer switch between DFRobot/Adafruit for sensor axis adjustment
 
 Virtually all the changes were made using (Aider, R1, and Claude 3.5 Sonnet) even this Updates section:
 aider --model openrouter/deepseek/deepseek-r1 --architect --editor-model claude-3-5-sonnet-20241022
