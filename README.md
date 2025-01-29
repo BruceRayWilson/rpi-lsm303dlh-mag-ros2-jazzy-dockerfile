@@ -16,6 +16,7 @@ See Josh's ROS2 Humble video at [Crafting your Dockerfile (Docker and Robotics P
 
 ## Updates
 
+- docs: Update Usage instructions with compass.py execution and manufacturer selection
 - feat: Add manufacturer switch between DFRobot/Adafruit for sensor axis adjustment
 
 Virtually all the changes were made using (Aider, R1, and Claude 3.5 Sonnet) even this Updates section:
@@ -44,3 +45,11 @@ To run the Docker container, execute:
 ```bash
 ./run.sh
 ```
+
+### Running the Compass Script
+
+After starting the container, run the compass script with:
+```bash
+python compass.py
+```
+Note: The default manufacturer is set to DFRobot. To use Adafruit sensors, edit the `MANUFACTURER` constant in `compass.py` to "Adafruit".
