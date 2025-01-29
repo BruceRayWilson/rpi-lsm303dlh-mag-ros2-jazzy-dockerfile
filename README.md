@@ -33,6 +33,7 @@ This project supports both DFRobot and Adafruit LSM303DLH compass breakout board
    - SDA → GPIO 2 (SDA)
 
 2. Enable I2C communication on your Raspberry Pi:
+
    ```bash
    sudo raspi-config
    ```
