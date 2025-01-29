@@ -49,7 +49,9 @@ To run the Docker container, execute:
 ### Running the Compass Script
 
 After starting the container, run the compass script with:
+
 ```bash
 python compass.py
 ```
+
 Note: The default manufacturer is set to DFRobot. To use Adafruit sensors, edit the `MANUFACTURER` constant in `compass.py` to "Adafruit".
