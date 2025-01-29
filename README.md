@@ -37,6 +37,17 @@ This project supports both DFRobot and Adafruit LSM303DLH compass breakout board
    ```bash
    sudo raspi-config
    ```
+   - Navigate to **Interface Options** → **I2C**
+   - Select **Yes** to enable the I2C interface
+   - Select **Ok** → **Finish**
+   - Reboot when prompted
+
+   After enabling I2C and rebooting, verify the sensor is detected with:
+   ```bash
+   i2cdetect -y 1
+   ```
+   You should see `1e` in the output table, which is the LSM303DLH's I2C address.
+   ```
 
 ## Usage
 
